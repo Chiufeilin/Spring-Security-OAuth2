@@ -1,6 +1,7 @@
 package com.chiu.security.springmvc.init;
 
 import com.chiu.security.springmvc.comfig.ApplicationConfig;
+import com.chiu.security.springmvc.comfig.WebConfig;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -14,7 +15,7 @@ public class SpringApplicationInitializer extends AbstractAnnotationConfigDispat
     // servletContext 相当于加载springmvc.xml
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[]{WebMvcConfigurer.class};
+        return new Class[]{WebConfig.class};
     }
 
     // URL-mapping
